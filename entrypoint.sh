@@ -39,7 +39,7 @@ fi
 
 IFS=' ' read -r -a args <<< "$args"
 
-apk add --allow-untrusted nimbus-sans-d-ot-ultra-light-1.0.0-r0.apk
+apk add --allow-untrusted /root/nimbus-sans-d-ot-ultra-light-1.0.0-r0.apk
 
 apk --no-cache add libwmf
 
