@@ -71,11 +71,11 @@ if [[ "$compiler" = "latexmk" ]]; then
   fi
 
   if [[ -n "$latexmk_use_xelatex" ]]; then
-    #for i in "${!args[@]}"; do
-    #  if [[ "${args[i]}" = "-pdf" ]]; then
-    #    unset 'args[i]'
-    #  fi
-    #done
+    for i in "${!args[@]}"; do
+      if [[ "${args[i]}" = "-pdf" ]]; then
+        unset 'args[i]'
+      fi
+    done
     args+=("-xelatex")
   fi
 else
