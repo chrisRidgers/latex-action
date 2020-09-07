@@ -43,10 +43,6 @@ apk add --allow-untrusted /root/nimbus-sans-d-ot-ultra-light-1.0.0-r0.apk
 
 apk --no-cache add libwmf
 
-fc-cache -fv
-
-fc-list -b | grep Nimbus | grep San
-
 if [[ "$compiler" = "latexmk" ]]; then
   if [[ -n "$latexmk_shell_escape" ]]; then
     args+=("-shell-escape")
@@ -75,11 +71,11 @@ if [[ "$compiler" = "latexmk" ]]; then
   fi
 
   if [[ -n "$latexmk_use_xelatex" ]]; then
-    for i in "${!args[@]}"; do
-      if [[ "${args[i]}" = "-pdf" ]]; then
-        unset 'args[i]'
-      fi
-    done
+    #for i in "${!args[@]}"; do
+    #  if [[ "${args[i]}" = "-pdf" ]]; then
+    #    unset 'args[i]'
+    #  fi
+    #done
     args+=("-xelatex")
   fi
 else
