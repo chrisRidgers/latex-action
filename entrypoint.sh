@@ -45,6 +45,8 @@ apk --no-cache add libwmf
 
 fc-cache -fv
 
+fc-list -b | grep Nimbus | grep San
+
 if [[ "$compiler" = "latexmk" ]]; then
   if [[ -n "$latexmk_shell_escape" ]]; then
     args+=("-shell-escape")
